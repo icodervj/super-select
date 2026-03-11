@@ -49,5 +49,20 @@ describe("MultiSelect", () => {
     fireEvent.click(screen.getByText("Beta"));
     expect(onChange).not.toHaveBeenCalledWith([options[0], options[1]]);
   });
-});
 
+  it("renders checkboxes when enabled", () => {
+    render(
+      <MultiSelect
+        options={options}
+        value={[]}
+        onChange={() => {}}
+        showCheckboxes
+      />
+    );
+
+    fireEvent.keyDown(screen.getByRole("combobox"), { key: "ArrowDown" });
+    expect(screen.getAllByTestId("rss-option-checkbox")).toHaveLength(
+      options.length
+    );
+  });
+});

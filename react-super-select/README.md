@@ -57,6 +57,7 @@ export const Example = () => {
       onChange={setValue}
       clearable
       searchable
+      showCheckboxes
     />
   );
 };
@@ -141,6 +142,7 @@ Props:
 - `searchable?: boolean`
 - `clearable?: boolean`
 - `disabled?: boolean`
+- `showCheckboxes?: boolean`
 - `searchType?: "startsWith" | "contains" | "fuzzy"`
 - `classNames?: ClassNames`
 - `components?: CustomComponents`
@@ -215,4 +217,3 @@ The components are safe for Next.js, Remix, and Astro. All browser-only APIs are
 ## License
 
 MIT
-

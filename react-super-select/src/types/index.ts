@@ -36,6 +36,7 @@ export type BaseSelectProps = {
   searchable?: boolean;
   clearable?: boolean;
   disabled?: boolean;
+  showCheckboxes?: boolean;
   searchType?: SearchType;
   classNames?: ClassNames;
   components?: CustomComponents;
@@ -69,4 +70,3 @@ export type SelectState = {
   inputValue: string;
   highlightedIndex: number;
 };
-

@@ -8,6 +8,7 @@ export type OptionProps = {
   onSelect: (option: OptionType) => void;
   classNames?: ClassNames;
   id?: string;
+  showCheckboxes?: boolean;
 };
 
 const Option: React.FC<OptionProps> = ({
@@ -17,6 +18,7 @@ const Option: React.FC<OptionProps> = ({
   onSelect,
   classNames,
   id,
+  showCheckboxes,
 }) => {
   const classes = [
     "rss-option",
@@ -44,10 +46,21 @@ const Option: React.FC<OptionProps> = ({
       onClick={handleClick}
       data-value={String(option.value)}
     >
+      {showCheckboxes ? (
+        <span className="rss-option__checkbox" aria-hidden="true">
+          <input
+            type="checkbox"
+            checked={isSelected}
+            readOnly
+            tabIndex={-1}
+            disabled={option.disabled}
+            data-testid="rss-option-checkbox"
+          />
+        </span>
+      ) : null}
       {option.label}
     </div>
   );
 };
 
 export default React.memo(Option);
-

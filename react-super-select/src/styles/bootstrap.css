@@ -84,8 +84,22 @@
 }
 
 .rss-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   padding: 0.375rem 0.75rem;
   cursor: pointer;
+}
+
+.rss-option__checkbox {
+  display: inline-flex;
+  align-items: center;
+}
+
+.rss-option__checkbox input {
+  width: 14px;
+  height: 14px;
+  margin: 0;
 }
 
 .rss-option--active {
@@ -114,4 +128,3 @@
   padding: 0.375rem 0.75rem;
   color: #6c757d;
 }
-

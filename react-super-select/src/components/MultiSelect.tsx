@@ -21,6 +21,7 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
   searchable = true,
   clearable = false,
   disabled = false,
+  showCheckboxes = false,
   searchType = "contains",
   classNames,
   components,
@@ -192,6 +193,7 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
           isActive={highlightedIndex === optionIndex}
           onSelect={handleSelect}
           classNames={classNames}
+          showCheckboxes={showCheckboxes}
         />
       );
     }
@@ -215,6 +217,7 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
             isActive={highlightedIndex === optionIndex}
             onSelect={handleSelect}
             classNames={classNames}
+            showCheckboxes={showCheckboxes}
           />
         );
       }

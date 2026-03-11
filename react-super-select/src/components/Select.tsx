@@ -20,6 +20,7 @@ const Select: React.FC<SelectProps> = ({
   searchable = true,
   clearable = false,
   disabled = false,
+  showCheckboxes = false,
   searchType = "contains",
   classNames,
   components,
@@ -153,6 +154,7 @@ const Select: React.FC<SelectProps> = ({
           isActive={highlightedIndex === optionIndex}
           onSelect={handleSelect}
           classNames={classNames}
+          showCheckboxes={showCheckboxes}
         />
       );
     }
@@ -176,6 +178,7 @@ const Select: React.FC<SelectProps> = ({
             isActive={highlightedIndex === optionIndex}
             onSelect={handleSelect}
             classNames={classNames}
+            showCheckboxes={showCheckboxes}
           />
         );
       }

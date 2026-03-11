@@ -52,6 +52,20 @@ export const Virtualized: Story = {
   },
 };
 
+export const Checkboxes: Story = {
+  render: () => {
+    const [value, setValue] = useState<Option[]>([]);
+    return (
+      <MultiSelect
+        options={options}
+        value={value}
+        onChange={setValue}
+        showCheckboxes
+      />
+    );
+  },
+};
+
 export const CustomStyling: Story = {
   render: () => {
     const [value, setValue] = useState<Option[]>([]);
@@ -70,4 +84,3 @@ export const CustomStyling: Story = {
     );
   },
 };
-
